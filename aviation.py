@@ -34,7 +34,6 @@ def distance(lon1, lat1, lon2, lat2):
 # In[3] get list of dict that represent cities (country, city, lat, long, city_id)
 r = requests.get(
     'http://www.numbeo.com:8008/api/cities?api_key=KEY')
-cities = json.loads(r.text)
 with open('cities.json', 'w') as file:
     json.dump(json.loads(r.text), file, ensure_ascii=False, indent=2)
 
