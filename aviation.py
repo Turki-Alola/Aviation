@@ -14,11 +14,11 @@ import numpy as np
 
 
 def get_indices_by_id(city_id):
-    return json.loads(requests.get('http://www.numbeo.com:8008/api/indices?api_key=eojgmx7e3dxnl9&city_id='+city_id).text)
+    return json.loads(requests.get('http://www.numbeo.com:8008/api/indices?api_key=KEY&city_id='+city_id).text)
 
 
 def get_close_cities(city_id, distance):
-    return json.loads(requests.get('http://www.numbeo.com:8008/api/close_cities_with_prices?api_key=eojgmx7e3dxnl9&max_distance='+distance+'&query=riyadh').text)
+    return json.loads(requests.get('http://www.numbeo.com:8008/api/close_cities_with_prices?api_key=KEY&max_distance='+distance+'&query=riyadh').text)
 
 
 # In[2] Calculate distance
